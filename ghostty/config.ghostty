@@ -1,0 +1,6 @@
+language = zh_CN
+background-opacity = 0.7
+theme = catppuccin-mocha.conf
+# font-family = Maple Mono NF CN
+# font-size = 14
+# font-variation = wght=450
