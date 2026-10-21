@@ -83,17 +83,18 @@ return {
         return nil
       end
 
-      -- ============ 通用键位 ============
+      -- ============ 通用键位（<leader>d + 动作键） ============
       vim.keymap.set("n", "<F5>", dap.continue, { desc = "调试继续" })
       vim.keymap.set("n", "<F10>", dap.step_over, { desc = "单步跳过" })
       vim.keymap.set("n", "<F11>", dap.step_into, { desc = "单步进入" })
       vim.keymap.set("n", "<F12>", dap.step_out, { desc = "单步跳出" })
+
       vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, { desc = "切换断点" })
       vim.keymap.set("n", "<leader>dB", function()
         dap.set_breakpoint(vim.fn.input("断点条件: "))
       end, { desc = "条件断点" })
       vim.keymap.set("n", "<leader>dr", dap.repl.open, { desc = "打开 REPL" })
-      vim.keymap.set("n", "<leader>dt", dap.terminate, { desc = "终止调试" })
+      vim.keymap.set("n", "<leader>dq", dap.terminate, { desc = "终止调试" })
       vim.keymap.set("n", "<leader>du", dapui.toggle, { desc = "切换 DAP UI" })
 
       require("which-key").add({

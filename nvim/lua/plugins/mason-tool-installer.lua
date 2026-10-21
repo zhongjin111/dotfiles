@@ -8,7 +8,7 @@ return {
       "google-java-format", "gofumpt", "goimports",
     },
     auto_update = true,
-    run_on_start = true,
-    start_delay = 3000,
+    run_on_start = false,
+    --     start_delay = 3000,
   },
 }

@@ -2,7 +2,7 @@ return {
   "catppuccin/nvim",
   name = "catppuccin",
   lazy = false,
-  priority = 1000,
+  priority = 1001,
   opts = {
     flavour = "mocha", -- 可选: latte, frappe, macchiato, mocha
     background = {
@@ -61,7 +61,7 @@ return {
       telescope = { enabled = true },
       notify = false,
       noice = false,
-      which_key = false,
+      which_key = true,
       lualine = true,
       -- bufferline 需要特殊处理，见下文
     },

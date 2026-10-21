@@ -1,4 +1,3 @@
--- lua/plugins/aerial.lua
 return {
   "stevearc/aerial.nvim",
   event = "LspAttach",
@@ -7,11 +6,12 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   keys = {
-    { "<leader>av", "<cmd>AerialToggle<CR>", desc = "代码大纲" },
-    { "<leader>ao", "<cmd>AerialOpen<CR>", desc = "打开大纲" },
+    { "<leader>at", "<cmd>AerialToggle<CR>", desc = "切换大纲" },
     { "<leader>ac", "<cmd>AerialClose<CR>", desc = "关闭大纲" },
-    { "{", "<cmd>AerialPrev<CR>", desc = "上一个符号" },
-    { "}", "<cmd>AerialNext<CR>", desc = "下一个符号" },
+    { "<leader>aj", "<cmd>AerialNext<CR>", desc = "下一个符号" },
+    { "<leader>ak", "<cmd>AerialPrev<CR>", desc = "上一个符号" },
+    { "<leader>ah", "<cmd>AerialClose<CR>", desc = "折叠当前节点" },
+    { "<leader>al", "<cmd>AerialOpen<CR>", desc = "展开当前节点" },
   },
   opts = {
     backends = { "lsp", "treesitter" },
@@ -41,15 +41,9 @@ return {
   },
   config = function(_, opts)
     require("aerial").setup(opts)
-
-    -- 集成到 lualine
     local ok, lualine = pcall(require, "lualine")
     if ok then
-      lualine.setup({
-        sections = {
-          lualine_x = { "aerial" },
-        },
-      })
+      lualine.setup({ sections = { lualine_x = { "aerial" } } })
     end
   end,
 }

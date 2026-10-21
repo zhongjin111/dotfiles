@@ -24,7 +24,8 @@ return {
       "<leader>fm",
       function() require("conform").format({ async = true }) end,
       mode = "",
-      desc = "[F]ormat buffer",
+      desc = "格式化当前 buffer",
+      --       desc = "[F]ormat buffer",
     },
   },
 }

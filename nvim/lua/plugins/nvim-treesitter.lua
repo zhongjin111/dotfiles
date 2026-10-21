@@ -11,7 +11,7 @@ return {
       "rust", "c", "cpp", "java", "go",
       "json", "yaml", "toml", "markdown", "markdown_inline",
       "bash", "dockerfile", "gitignore", "html", "css", "scss",
-      "regex", "sql", "xml",
+      "regex", "sql", "xml", "nvim-treesitter/nvim-treesitter-textobjects",
     },
     auto_install = true,
     highlight = { enable = true },
